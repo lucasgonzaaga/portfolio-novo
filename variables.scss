@@ -1,0 +1,20 @@
+// Cores Principais e de Fundo
+$color-primary-dark: #1A202C;    // Fundo, cabeçalhos, texto principal. (Quase preto / Azul Marinho Escuro)
+$color-background-light: #F7FAFC; // Fundo claro para seções de contraste. (Off-White/Branco Sujo)
+$color-white: #FFFFFF;           // Fundo secundário e texto em fundos escuros.
+
+// Cor de Destaque / Ação (Accent)
+$color-accent-cyan: #00A3C4;    // Cor vibrante para botões, links, ícones e destaque.
+$color-accent-hover: #007D9A;   // Versão ligeiramente mais escura para estados :hover.
+
+// Tons de Cinza (Hierarquia de Texto e Bordas)
+$color-gray-text: #4A5568;      // Texto secundário e parágrafos.
+$color-gray-medium: #A0AEC0;    // Linhas divisórias e bordas.
+$color-gray-light: #E2E8F0;     // Fundo leve para componentes.
+
+// Cores de Status/Feedback (Opcional, mas útil)
+$color-success: #48BB78;       // Verde (Sucesso/Confirmação)
+$color-error: #F56565;         // Vermelho (Erro/Aviso)
+
+//fontes
+$font-menu: font-family "Elms Sans", sans-serif;

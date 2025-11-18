@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #F7FAFC;
+}
+
+.menu-horizontal {
+  display: flex;
+  background-color: #1A202C;
+  color: #4A5568;
+}
+
+.container-menu {
+  padding: 20px;
+  width: 100%;
+}/*# sourceMappingURL=main.css.map */
