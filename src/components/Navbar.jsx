@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Navbar = () => {
+const Navbar = ({ theme, toggleTheme }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -15,10 +15,10 @@ const Navbar = () => {
     }, []);
 
     const links = [
-        { name: 'Home', href: '#' },
-        { name: 'About', href: '#about' },
-        { name: 'Works', href: '#works' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'Início', href: '#home' },
+        { name: 'Sobre', href: '#about' },
+        { name: 'Trabalhos', href: '#works' },
+        { name: 'Contato', href: '#contact' },
     ];
 
     return (
@@ -28,29 +28,43 @@ const Navbar = () => {
         >
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-center items-center relative">
 
-                {/* Desktop Menu - Centered */}
-                <div className="hidden md:flex gap-12 bg-white/5 px-8 py-3 rounded-full backdrop-blur-sm border border-white/5">
+                <div className="hidden md:flex gap-12 bg-white/5 px-8 py-3 rounded-full backdrop-blur-sm border border-white/5 items-center">
                     {links.map((link) => (
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-gray-300 hover:text-[#8352FD] transition-colors uppercase tracking-widest"
+                            className="text-sm font-medium text-[var(--color-text-muted)] hover:text-[#8352FD] transition-colors uppercase tracking-widest"
                         >
                             {link.name}
                         </a>
                     ))}
                 </div>
 
-                {/* Mobile Toggle - Absolute Right */}
                 <button
-                    className="md:hidden text-white absolute right-6"
-                    onClick={() => setIsOpen(!isOpen)}
+                    onClick={toggleTheme}
+                    className="hidden md:block text-gray-300 hover:text-[#8352FD] transition-colors absolute right-6"
+                    aria-label="Toggle theme"
                 >
-                    {isOpen ? <X /> : <Menu />}
+                    {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
                 </button>
+
+                <div className="md:hidden flex items-center gap-4 absolute right-6">
+                    <button
+                        onClick={toggleTheme}
+                        className="text-white"
+                        aria-label="Toggle theme"
+                    >
+                        {theme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
+                    </button>
+                    <button
+                        className="text-white"
+                        onClick={() => setIsOpen(!isOpen)}
+                    >
+                        {isOpen ? <X /> : <Menu />}
+                    </button>
+                </div>
             </div>
 
-            {/* Mobile Menu */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -64,7 +78,7 @@ const Navbar = () => {
                                 key={link.name}
                                 href={link.href}
                                 onClick={() => setIsOpen(false)}
-                                className="text-lg font-medium text-gray-300 hover:text-[#8352FD] transition-colors"
+                                className="text-lg font-medium text-[var(--color-text-muted)] hover:text-[#8352FD] transition-colors"
                             >
                                 {link.name}
                             </a>
