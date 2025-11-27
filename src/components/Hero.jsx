@@ -10,13 +10,10 @@ const AnimatedSphere = ({ theme }) => {
     useFrame(({ clock, mouse }) => {
         const t = clock.getElapsedTime();
 
-        // Mouse interaction
         const x = mouse.x;
         const y = mouse.y;
         const dist = Math.sqrt(x * x + y * y);
 
-        // Closer to center (dist=0) -> higher distort (0.8)
-        // Farther from center (dist=1) -> lower distort (0.3)
         const targetDistort = THREE.MathUtils.lerp(0.8, 0.3, dist);
 
         if (sphereRef.current) {

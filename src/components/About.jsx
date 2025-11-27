@@ -9,19 +9,15 @@ const About = () => {
         offset: ["start start", "end end"]
     });
 
-    // Exit animation: Fade out when reaching the end of the section
     const opacity = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
     const scale = useTransform(scrollYProgress, [0.8, 1], [1, 0.9]);
 
     return (
         <section ref={containerRef} id="about" className="relative w-full bg-[var(--color-bg-secondary)] text-[var(--color-text)]">
             <div className="flex flex-col md:flex-row min-h-[200vh]">
-
-                {/* Sticky Left Side (Image & Title) */}
                 <div className="w-full md:w-1/2 h-screen sticky top-0 flex flex-col p-0 overflow-hidden">
                     <motion.div style={{ opacity, scale }} className="relative w-full h-full">
 
-                        {/* Image Placeholder */}
                         <div className="absolute inset-0 bg-[var(--color-bg-tertiary)] flex items-center justify-center overflow-hidden">
                             <img
                                 src={profileImage}
@@ -31,7 +27,6 @@ const About = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-secondary)] via-transparent to-transparent opacity-90"></div>
                         </div>
 
-                        {/* Title Overlay */}
                         <div className="absolute bottom-20 left-8 md:left-20 z-20">
                             <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-[var(--color-text)]">
                                 Sobre <br /> <span className="text-[var(--color-text-muted)]">Mim</span>
@@ -40,7 +35,6 @@ const About = () => {
                     </motion.div>
                 </div>
 
-                {/* Scrollable Right Side (Content) */}
                 <div className="w-full md:w-1/2 p-8 md:p-20 flex flex-col justify-center space-y-32 pb-40">
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
@@ -49,9 +43,9 @@ const About = () => {
                         viewport={{ once: false, margin: "-100px" }}
                         className="space-y-6"
                     >
-                        <h3 className="text-2xl font-light text-[var(--color-text-muted)]">01. A Jornada</h3>
+                        <h3 className="text-2xl font-light text-[var(--color-text-muted)]">01. O Inicio</h3>
                         <p className="text-xl md:text-2xl leading-relaxed font-light">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Desde o berço eu fui uma pessoa apaixonada por tecnologia, sempre tive muitas curiosades em saber tudo que eu via e usava funcionava e com isso por volta dos meus 12 anos eu inciei meus estudos na área de desenvolvimento front-end sendo a minha área de atuação até os dias de hoje.
                         </p>
                     </motion.div>
 
@@ -64,7 +58,7 @@ const About = () => {
                     >
                         <h3 className="text-2xl font-light text-[var(--color-text-muted)]">02. A Paixão</h3>
                         <p className="text-xl md:text-2xl leading-relaxed font-light">
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Assim que comecei meus estudos na área foi paixão a primeira vista, eu finalmente estava descobrindo como aquela mágica que eu via diante dos meus olhos era por de baixo do pano, e foi assim que eu tive a certeza do que eu queria para mim.
                         </p>
                     </motion.div>
 
@@ -77,7 +71,7 @@ const About = () => {
                     >
                         <h3 className="text-2xl font-light text-[var(--color-text-muted)]">03. O Futuro</h3>
                         <p className="text-xl md:text-2xl leading-relaxed font-light">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                            Eu pretendo para o meu futuro ser uma referência dentro do mercado de desenvolvimento web, sigo muito convicto que num futuro não distante vou me realizar.
                         </p>
                         <div className="pt-8">
                             <button

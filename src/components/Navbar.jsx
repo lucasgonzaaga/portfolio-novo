@@ -18,6 +18,7 @@ const Navbar = ({ theme, toggleTheme }) => {
         { name: 'Início', href: '#home' },
         { name: 'Sobre', href: '#about' },
         { name: 'Trabalhos', href: '#works' },
+        { name: 'Feedbacks', href: '#feedback' },
         { name: 'Contato', href: '#contact' },
     ];
 

@@ -1,0 +1,21 @@
+/* Override global cursor: none for admin panel */
+#root,
+#root * {
+    cursor: auto !important;
+}
+
+button,
+a,
+input,
+textarea,
+select,
+[role="button"] {
+    cursor: pointer !important;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    cursor: text !important;
+}

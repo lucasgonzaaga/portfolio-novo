@@ -2,25 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
 
 :root {
-  --color-bg: #ffffff;
-  --color-primary: #8352FD;
-  --color-secondary: #39FF14;
-  --color-text: #1a1a1a;
-  --color-surface: rgba(0, 0, 0, 0.05);
-  --color-bg-secondary: #f3f4f6;
-  --color-bg-tertiary: #ffffff;
-  --color-text-muted: #1f2937;
+  --color-bg: #FAFBFC;
+  --color-primary: #6366F1;
+  --color-secondary: #06B6D4;
+  --color-text: #0F172A;
+  --color-surface: rgba(99, 102, 241, 0.08);
+  --color-bg-secondary: #F1F5F9;
+  --color-bg-tertiary: #FFFFFF;
+  --color-text-muted: #475569;
 }
 
 :root[data-theme="dark"] {
-  --color-bg: #050505;
-  --color-primary: #8352FD;
-  --color-secondary: #39FF14;
-  --color-text: #F0F0F0;
-  --color-surface: rgba(255, 255, 255, 0.05);
-  --color-bg-secondary: #111111;
-  --color-bg-tertiary: #000000;
-  --color-text-muted: #d1d5db;
+  --color-bg: #0F172A;
+  --color-primary: #818CF8;
+  --color-secondary: #22D3EE;
+  --color-text: #F1F5F9;
+  --color-surface: rgba(129, 140, 248, 0.1);
+  --color-bg-secondary: #1E293B;
+  --color-bg-tertiary: #0F172A;
+  --color-text-muted: #94A3B8;
 }
 
 html,
@@ -34,7 +34,6 @@ body,
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: 'Outfit', sans-serif;
-  scroll-behavior: smooth;
   scroll-behavior: smooth;
   cursor: none;
 }
@@ -53,7 +52,7 @@ body,
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #475569;
   border-radius: 4px;
 }
 

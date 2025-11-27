@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Works from './components/Works';
+import Feedback from './components/Feedback';
 import Contact from './components/Contact';
 import CustomCursor from './components/CustomCursor';
 
@@ -22,6 +23,7 @@ function App() {
       <Hero theme={theme} />
       <About />
       <Works />
+      <Feedback />
       <Contact />
     </main>
   );
