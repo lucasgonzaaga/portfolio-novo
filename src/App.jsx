@@ -18,7 +18,7 @@ function App() {
 
   return (
     <main className="bg-[var(--color-bg)] min-h-screen text-[var(--color-text)] transition-colors duration-500">
-      <CustomCursor theme={theme} />
+      {/* <CustomCursor theme={theme} /> */}
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       {/* <Hero theme={theme} /> */}
       <About />
