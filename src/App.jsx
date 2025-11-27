@@ -20,10 +20,10 @@ function App() {
     <main className="bg-[var(--color-bg)] min-h-screen text-[var(--color-text)] transition-colors duration-500">
       <CustomCursor theme={theme} />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <Hero theme={theme} />
+      {/* <Hero theme={theme} /> */}
       <About />
       <Works />
-      <Feedback />
+      {/* <Feedback /> */}
       <Contact />
     </main>
   );
