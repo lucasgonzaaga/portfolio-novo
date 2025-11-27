@@ -23,7 +23,7 @@ function App() {
       <Hero theme={theme} />
       <About />
       <Works />
-      <Feedback />
+      {/* <Feedback /> */}
       <Contact />
     </main>
   );
