@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
+/* import bcrypt from 'bcryptjs'; // Not used in auth middleware directly, but keeping consistent if needed later */
 
 dotenv.config();
 
